@@ -11,7 +11,6 @@ import torch
 
 from models.yolo import Model
 from utils.general import check_requirements, set_logging
-from utils.google_utils import attempt_download
 from utils.torch_utils import select_device
 
 dependencies = ['torch', 'yaml']
@@ -36,7 +35,6 @@ def create(name, pretrained, channels, classes, autoshape):
         model = Model(config, channels, classes)
         if pretrained:
             fname = f'{name}.pt'  # checkpoint filename
-            attempt_download(fname)  # download if not found locally
             ckpt = torch.load(fname, map_location=torch.device('cpu'))  # load
             msd = model.state_dict()  # model state_dict
             csd = ckpt['model'].float().state_dict()  # checkpoint state_dict as FP32

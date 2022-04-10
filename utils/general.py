@@ -18,7 +18,6 @@ import torch
 import torchvision
 import yaml
 
-from utils.google_utils import gsutil_getsize
 from utils.metrics import fitness
 from utils.torch_utils import init_torch_seeds
 
@@ -28,6 +27,12 @@ np.set_printoptions(linewidth=320, formatter={'float_kind': '{:11.5g}'.format}) 
 pd.options.display.max_columns = 10
 cv2.setNumThreads(0)  # prevent OpenCV from multithreading (incompatible with PyTorch DataLoader)
 os.environ['NUMEXPR_MAX_THREADS'] = str(min(os.cpu_count(), 8))  # NumExpr max threads
+
+
+def gsutil_getsize(url=''):
+    # gs://bucket/file size https://cloud.google.com/storage/docs/gsutil/commands/du
+    s = subprocess.check_output(f'gsutil du {url}', shell=True).decode('utf-8')
+    return eval(s.split(' ')[0]) if len(s) else 0  # bytes
 
 
 def set_logging(rank=-1):
@@ -155,22 +160,18 @@ def check_file(file):
 
 def check_dataset(dict):
     # Download dataset if not found locally
-    val, s = dict.get('val'), dict.get('download')
+    train = dict.get('train')
+    if train and len(train):
+        train = [Path(x).resolve() for x in (train if isinstance(train, list) else [train])]  # train path
+        if not all(x.exists() for x in train):
+            print('\nWARNING: Dataset not found, nonexistent paths: %s' % [str(x) for x in train if not x.exists()])
+            raise Exception('Dataset not found.')
+    val = dict.get('val')
     if val and len(val):
         val = [Path(x).resolve() for x in (val if isinstance(val, list) else [val])]  # val path
         if not all(x.exists() for x in val):
             print('\nWARNING: Dataset not found, nonexistent paths: %s' % [str(x) for x in val if not x.exists()])
-            if s and len(s):  # download script
-                print('Downloading %s ...' % s)
-                if s.startswith('http') and s.endswith('.zip'):  # URL
-                    f = Path(s).name  # filename
-                    torch.hub.download_url_to_file(s, f)
-                    r = os.system('unzip -q %s -d ../ && rm %s' % (f, f))  # unzip
-                else:  # bash script
-                    r = os.system(s)
-                print('Dataset autodownload %s\n' % ('success' if r == 0 else 'failure'))  # analyze return value
-            else:
-                raise Exception('Dataset not found.')
+            raise Exception('Dataset not found.')
 
 
 def make_divisible(x, divisor):
