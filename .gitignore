@@ -1,8 +1,8 @@
 **__pycache__**
-runs/
-weights/
-data/coco/
-data/coco128/
+runs
+weights
+data/coco
+data/coco128
 *.pt
 
 *.jpg
