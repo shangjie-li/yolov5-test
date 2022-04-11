@@ -1,6 +1,3 @@
-import argparse
-import time
-from pathlib import Path
 import matplotlib.pyplot as plt
 
 try:
@@ -9,7 +6,11 @@ except ImportError:
     import sys
     sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
     import cv2
-    
+
+import argparse
+import time
+from pathlib import Path
+
 import torch
 import torch.backends.cudnn as cudnn
 from numpy import random
