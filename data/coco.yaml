@@ -5,14 +5,14 @@
 #     /data
 #       /coco
 #         /images
-#         /annotations_for_yolo
+#         /annotations_yolo
 #           /annotations
 #           /sets
 
 
-train: data/coco/annotations_for_yolo/sets/train2017.txt  # 118287 images
-val: data/coco/annotations_for_yolo/sets/val2017.txt  # 5000 images
-test: data/coco/annotations_for_yolo/sets/test-dev2017.txt  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+train: data/coco/annotations_yolo/sets/train2017.txt  # 118287 images
+val: data/coco/annotations_yolo/sets/val2017.txt  # 5000 images
+test: data/coco/annotations_yolo/sets/test-dev2017.txt  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
 
 # number of classes
 nc: 80

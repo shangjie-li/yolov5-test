@@ -5,13 +5,13 @@
 #     /data
 #       /coco128
 #         /images
-#         /annotations_for_yolo
+#         /annotations_yolo
 #           /annotations
 #           /sets
 
 
-train: data/coco128/annotations_for_yolo/sets/train.txt  # 128 images
-val: data/coco128/annotations_for_yolo/sets/val.txt  # 128 images
+train: data/coco128/annotations_yolo/sets/train.txt  # 128 images
+val: data/coco128/annotations_yolo/sets/val.txt  # 128 images
 
 # number of classes
 nc: 80

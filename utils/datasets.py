@@ -341,7 +341,7 @@ class LoadStreams:  # multiple IP or RTSP cameras
 def img2label_paths(img_paths):
     # Define label paths as a function of image paths
     sa = os.sep + 'images' + os.sep
-    sb = os.sep + 'annotations_for_yolo' + os.sep + 'annotations' + os.sep
+    sb = os.sep + 'annotations_yolo' + os.sep + 'annotations' + os.sep
     return ['txt'.join(x.replace(sa, sb, 1).rsplit(x.split('.')[-1], 1)) for x in img_paths]
 
 
