@@ -113,7 +113,7 @@ def detect(save_img=False):
 
             # Stream results
             if view_img:
-                cv2.imshow(str(p), im0)
+                cv2.imshow('Prediction', im0)
                 key = cv2.waitKey(0)
                 if key == 27:
                     break
