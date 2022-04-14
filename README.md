@@ -54,21 +54,24 @@ A test version of Yolov5 in PyTorch for object detection
 | Model                | Dataset  | Epoch | val mAP@.5     | val mAP@.5:.95 |
 |:--------------------:|:--------:|:-----:|:--------------:|:--------------:|
 | yolov5s              | COCO     | 100   | 0.510          | 0.314          |
-| yolov5s              | KITTI    | 100   |                |                |
-| yolov5s (pretrained) | KITTI    | 100   |                |                |
+| yolov5s              | KITTI    | 100   | 0.647          | 0.388          |
+| yolov5s (pretrained) | KITTI    | 100   | 0.679          | 0.430          |
 | yolov5s              | SEUMM HQ | 100   |                |                |
 | yolov5s (pretrained) | SEUMM HQ | 100   |                |                |
 
 ## Demo
- - Run on an image with COCO 2017 model
+ - Run a demo with COCO 2017 model
    ```
    python detect.py --weights=weights/coco/yolov5s_100ep.pt --source=my_image.jpg --view-img
+   python detect.py --weights=weights/coco/yolov5s_100ep.pt --source=test_coco
    ```
- - Run on an image with KITTI model
+ - Run a demo with KITTI model
    ```
    python detect.py --weights=weights/kitti/yolov5s_100ep.pt --source=my_image.jpg --view-img
+   python detect.py --weights=weights/kitti/yolov5s_100ep.pt --source=test_kitti
    ```
- - Run on an image with SEUMM HQ model
+ - Run a demo with SEUMM HQ model
    ```
    python detect.py --weights=weights/seumm_hq/yolov5s_100ep.pt --source=my_image.jpg --view-img
+   python detect.py --weights=weights/seumm_hq/yolov5s_100ep.pt --source=test_seumm_hq
    ```
