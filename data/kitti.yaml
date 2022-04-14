@@ -1,0 +1,19 @@
+# KITTI dataset
+# Default dataset location is:
+#   /yolov5-test
+#     /data
+#       /kitti
+#         /images
+#         /annotations_yolo
+#           /annotations
+#           /sets
+
+
+train: data/kitti/annotations_yolo/sets/train.txt  # 4489 images
+val: data/kitti/annotations_yolo/sets/val.txt  # 2990 images
+
+# number of classes
+nc: 7
+
+# class names
+names: [ 'pedestrian', 'cyclist', 'car', 'bus', 'truck', 'traffic_light', 'traffic_sign' ]

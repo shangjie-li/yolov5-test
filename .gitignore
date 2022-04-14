@@ -3,6 +3,7 @@ runs
 weights
 data/coco
 data/coco128
+data/kitti
 *.pt
 
 *.jpg

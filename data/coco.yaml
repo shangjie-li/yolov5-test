@@ -1,5 +1,4 @@
 # COCO 2017 dataset http://cocodataset.org
-# Train command: python train.py --data coco.yaml
 # Default dataset location is:
 #   /yolov5-test
 #     /data
