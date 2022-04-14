@@ -1,0 +1,19 @@
+# SEUMM dataset
+# Default dataset location is:
+#   /yolov5-test
+#     /data
+#       /seumm
+#         /images
+#         /annotations_yolo
+#           /annotations
+#           /sets
+
+
+train: data/seumm/annotations_yolo/sets/train.txt  # 6667 images
+val: data/seumm/annotations_yolo/sets/val.txt  # 3333 images
+
+# number of classes
+nc: 7
+
+# class names
+names: [ 'pedestrian', 'cyclist', 'car', 'bus', 'truck', 'traffic_light', 'traffic_sign' ]

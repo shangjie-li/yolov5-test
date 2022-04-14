@@ -5,6 +5,7 @@ data/coco
 data/coco128
 data/kitti
 data/seumm_hq
+data/seumm
 *.pt
 
 *.jpg
