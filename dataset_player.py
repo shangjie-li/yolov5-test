@@ -83,12 +83,9 @@ if __name__ == '__main__':
         print('labels:\n', labels)
         print()
         
+        # press 'Esc' to shut down, and every key else to continue
         key = cv2.waitKey(0)
         if key == 27:
             break
         else:
             continue
-        
-        
-    
-    
