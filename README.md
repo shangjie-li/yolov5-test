@@ -56,8 +56,8 @@ A test version of Yolov5 in PyTorch for object detection
 | yolov5s              | COCO     | 100   | 0.510          | 0.314          |
 | yolov5s              | KITTI    | 100   | 0.647          | 0.388          |
 | yolov5s (pretrained) | KITTI    | 100   | 0.679          | 0.430          |
-| yolov5s              | SEUMM HQ | 100   |                |                |
-| yolov5s (pretrained) | SEUMM HQ | 100   |                |                |
+| yolov5s              | SEUMM HQ | 100   | 0.952          | 0.613          |
+| yolov5s (pretrained) | SEUMM HQ | 100   | 0.966          | 0.650          |
 
 ## Demo
  - Run a demo with COCO 2017 model
