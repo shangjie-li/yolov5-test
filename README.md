@@ -39,12 +39,12 @@ A test version of Yolov5 in PyTorch for object detection
 
 | Model                | Dataset  | Epoch | val mAP@.5        | val mAP@.5:.95    |
 |:--------------------:|:--------:|:-----:|:-----------------:|:-----------------:|
-| yolov5s(no pretrain) | COCO     | 100   | 0.51              | 0.314             |
-| yolov5s(no pretrain) | COCO128  | 300   |                   |                   |
-| yolov5s(no pretrain) | KITTI    | 100   |                   |                   |
+| yolov5s              | COCO     | 100   | 0.51              | 0.314             |
+| yolov5s              | COCO128  | 300   |                   |                   |
 | yolov5s              | KITTI    | 100   |                   |                   |
-| yolov5s(no pretrain) | SEUMM HQ | 100   |                   |                   |
+| yolov5s (pretrained) | KITTI    | 100   |                   |                   |
 | yolov5s              | SEUMM HQ | 100   |                   |                   |
+| yolov5s (pretrained) | SEUMM HQ | 100   |                   |                   |
 
 ## Demo
  - Run on the image with COCO 2017 model
