@@ -6,6 +6,8 @@ data/coco128
 data/kitti
 data/seumm_hq_lwir
 data/seumm_lwir
+data/seumm_hq_visible
+data/seumm_visible
 *.pt
 
 *.jpg

@@ -1,0 +1,19 @@
+# SEUMM HQ VISIBLE dataset
+# Default dataset location is:
+#   /yolov5-test
+#     /data
+#       /seumm_hq_visible
+#         /images
+#         /annotations_yolo
+#           /annotations
+#           /sets
+
+
+train: data/seumm_hq_visible/annotations_yolo/sets/train.txt  # 1875 images
+val: data/seumm_hq_visible/annotations_yolo/sets/val.txt  # 937 images
+
+# number of classes
+nc: 2
+
+# class names
+names: [ 'car', 'person' ]
