@@ -4,8 +4,8 @@ weights
 data/coco
 data/coco128
 data/kitti
-data/seumm_hq
-data/seumm
+data/seumm_hq_lwir
+data/seumm_lwir
 *.pt
 
 *.jpg

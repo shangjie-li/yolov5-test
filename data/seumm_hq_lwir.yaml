@@ -1,16 +1,16 @@
-# SEUMM HQ dataset
+# SEUMM HQ LWIR dataset
 # Default dataset location is:
 #   /yolov5-test
 #     /data
-#       /seumm_hq
+#       /seumm_hq_lwir
 #         /images
 #         /annotations_yolo
 #           /annotations
 #           /sets
 
 
-train: data/seumm_hq/annotations_yolo/sets/train.txt  # 1875 images
-val: data/seumm_hq/annotations_yolo/sets/val.txt  # 937 images
+train: data/seumm_hq_lwir/annotations_yolo/sets/train.txt  # 1875 images
+val: data/seumm_hq_lwir/annotations_yolo/sets/val.txt  # 937 images
 
 # number of classes
 nc: 2

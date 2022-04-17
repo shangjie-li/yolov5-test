@@ -16,15 +16,15 @@ A test version of Yolov5 in PyTorch for object detection
    python dataset_player.py --data=data/kitti.yaml
    python dataset_player.py --data=data/kitti.yaml --training
    ```
- - Check SEUMM HQ dataset
+ - Check SEUMM HQ LWIR dataset
    ```
-   python dataset_player.py --data=data/seumm_hq.yaml
-   python dataset_player.py --data=data/seumm_hq.yaml --training
+   python dataset_player.py --data=data/seumm_hq_lwir.yaml
+   python dataset_player.py --data=data/seumm_hq_lwir.yaml --training
    ```
- - Check SEUMM dataset
+ - Check SEUMM LWIR dataset
    ```
-   python dataset_player.py --data=data/seumm.yaml
-   python dataset_player.py --data=data/seumm.yaml --training
+   python dataset_player.py --data=data/seumm_lwir.yaml
+   python dataset_player.py --data=data/seumm_lwir.yaml --training
    ```
 
 ## Training
@@ -36,13 +36,13 @@ A test version of Yolov5 in PyTorch for object detection
    ```
    python train.py --data=data/kitti.yaml
    ```
- - Train on SEUMM HQ dataset
+ - Train on SEUMM HQ LWIR dataset
    ```
-   python train.py --data=data/seumm_hq.yaml
+   python train.py --data=data/seumm_hq_lwir.yaml
    ```
- - Train on SEUMM dataset
+ - Train on SEUMM LWIR dataset
    ```
-   python train.py --data=data/seumm.yaml
+   python train.py --data=data/seumm_lwir.yaml
    ```
 
 ## Evaluation
@@ -54,25 +54,25 @@ A test version of Yolov5 in PyTorch for object detection
    ```
    python test.py --data=data/kitti.yaml --weights=weights/kitti/yolov5s_100ep.pt
    ```
- - Evaluate on SEUMM HQ dataset
+ - Evaluate on SEUMM HQ LWIR dataset
    ```
-   python test.py --data=data/seumm_hq.yaml --weights=weights/seumm_hq/yolov5s_100ep.pt
+   python test.py --data=data/seumm_hq_lwir.yaml --weights=weights/seumm_hq_lwir/yolov5s_100ep.pt
    ```
- - Evaluate on SEUMM dataset
+ - Evaluate on SEUMM LWIR dataset
    ```
-   python test.py --data=data/seumm.yaml --weights=weights/seumm/yolov5s_100ep.pt
+   python test.py --data=data/seumm_lwir.yaml --weights=weights/seumm_lwir/yolov5s_100ep.pt
    ```
  - The result should be
 
-| Model                | Dataset  | Epoch | val mAP@.5     | val mAP@.5:.95 |
-|:--------------------:|:--------:|:-----:|:--------------:|:--------------:|
-| yolov5s              | COCO     | 100   | 0.510          | 0.314          |
-| yolov5s              | KITTI    | 100   | 0.647          | 0.388          |
-| yolov5s (pretrained) | KITTI    | 100   | 0.679          | 0.430          |
-| yolov5s              | SEUMM HQ | 100   | 0.952          | 0.613          |
-| yolov5s (pretrained) | SEUMM HQ | 100   | 0.966          | 0.650          |
-| yolov5s              | SEUMM    | 100   | 0.886          | 0.564          |
-| yolov5s (pretrained) | SEUMM    | 100   | 0.906          | 0.596          |
+| Model                | Dataset    | Epoch | val mAP@.5     | val mAP@.5:.95 |
+|:--------------------:|:----------:|:-----:|:--------------:|:--------------:|
+| yolov5s              | COCO       | 100   | 0.510          | 0.314          |
+| yolov5s              | KITTI      | 100   | 0.647          | 0.388          |
+| yolov5s (pretrained) | KITTI      | 100   | 0.679          | 0.430          |
+| yolov5s              | SEUMM-HQ-L | 100   | 0.952          | 0.613          |
+| yolov5s (pretrained) | SEUMM-HQ-L | 100   | 0.966          | 0.650          |
+| yolov5s              | SEUMM-L    | 100   | 0.886          | 0.564          |
+| yolov5s (pretrained) | SEUMM-L    | 100   | 0.906          | 0.596          |
 
 ## Demo
  - Run a demo with COCO 2017 model
@@ -85,13 +85,13 @@ A test version of Yolov5 in PyTorch for object detection
    python detect.py --weights=weights/kitti/yolov5s_100ep.pt --source=my_image.jpg --view-img
    python detect.py --weights=weights/kitti/yolov5s_100ep.pt --source=test_images
    ```
- - Run a demo with SEUMM HQ model
+ - Run a demo with SEUMM HQ LWIR model
    ```
-   python detect.py --weights=weights/seumm_hq/yolov5s_100ep.pt --source=my_image.jpg --view-img
-   python detect.py --weights=weights/seumm_hq/yolov5s_100ep.pt --source=test_images
+   python detect.py --weights=weights/seumm_hq_lwir/yolov5s_100ep.pt --source=my_image.jpg --view-img
+   python detect.py --weights=weights/seumm_hq_lwir/yolov5s_100ep.pt --source=test_images
    ```
- - Run a demo with SEUMM model
+ - Run a demo with SEUMM LWIR model
    ```
-   python detect.py --weights=weights/seumm/yolov5s_100ep.pt --source=my_image.jpg --view-img
-   python detect.py --weights=weights/seumm/yolov5s_100ep.pt --source=test_images
+   python detect.py --weights=weights/seumm_lwir/yolov5s_100ep.pt --source=my_image.jpg --view-img
+   python detect.py --weights=weights/seumm_lwir/yolov5s_100ep.pt --source=test_images
    ```
