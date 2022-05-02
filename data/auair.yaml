@@ -1,0 +1,19 @@
+# AUAIR dataset
+# Default dataset location is:
+#   /yolov5-test
+#     /data
+#       /auair
+#         /images
+#         /annotations_yolo
+#           /annotations
+#           /sets
+
+
+train: data/auair/annotations_yolo/sets/train.txt  # 21882 images
+val: data/auair/annotations_yolo/sets/val.txt  # 10941 images
+
+# number of classes
+nc: 8
+
+# class names
+names: [ 'Human', 'Car', 'Truck', 'Van', 'Motorbike', 'Bicycle', 'Bus', 'Trailer' ]

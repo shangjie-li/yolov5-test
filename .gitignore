@@ -8,6 +8,7 @@ data/seumm_hq_lwir
 data/seumm_lwir
 data/seumm_hq_visible
 data/seumm_visible
+data/auair
 *.pt
 
 *.jpg
