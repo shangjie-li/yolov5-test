@@ -1,0 +1,19 @@
+# SEUMM LWIR dataset
+# Default dataset location is:
+#   /yolov5-test
+#     /data
+#       /seumm_lwir_15200
+#         /images
+#         /annotations_yolo
+#           /annotations
+#           /sets
+
+
+train: data/seumm_lwir_15200/annotations_yolo/sets/train.txt  # 10134 images
+val: data/seumm_lwir_15200/annotations_yolo/sets/val.txt  # 5066 images
+
+# number of classes
+nc: 7
+
+# class names
+names: [ 'pedestrian', 'cyclist', 'car', 'bus', 'truck', 'traffic_light', 'traffic_sign' ]
