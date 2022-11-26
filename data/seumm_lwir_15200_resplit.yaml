@@ -1,0 +1,19 @@
+# SEUMM LWIR 15200 RESPLIT dataset
+# Default dataset location is:
+#   /yolov5-test
+#     /data
+#       /seumm_lwir_15200_resplit
+#         /images
+#         /annotations_yolo
+#           /annotations
+#           /sets
+
+
+train: data/seumm_lwir_15200_resplit/annotations_yolo/sets/train.txt  # 7600 images
+val: data/seumm_lwir_15200_resplit/annotations_yolo/sets/val.txt  # 7600 images
+
+# number of classes
+nc: 7
+
+# class names
+names: [ 'pedestrian', 'cyclist', 'car', 'bus', 'truck', 'traffic_light', 'traffic_sign' ]
