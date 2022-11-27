@@ -9,8 +9,8 @@
 #           /sets
 
 
-train: data/seumm_lwir_15200_resplit/annotations_yolo/sets/train.txt  # 7600 images
-val: data/seumm_lwir_15200_resplit/annotations_yolo/sets/val.txt  # 7600 images
+train: data/seumm_lwir_15200_resplit/annotations_yolo/sets/train2.txt
+val: data/seumm_lwir_15200_resplit/annotations_yolo/sets/val2.txt
 
 # number of classes
 nc: 7
