@@ -9,10 +9,12 @@ data/seumm_hq_lwir
 data/seumm_lwir
 data/seumm_lwir_15200
 data/seumm_lwir_15200_resplit
+data/seumm_lwir_25712
 data/seumm_hq_visible
 data/seumm_visible
 data/seumm_visible_15200
 data/seumm_visible_15200_resplit
+data/seumm_visible_25712
 data/auair
 *.pt
 
