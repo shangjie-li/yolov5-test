@@ -1,0 +1,19 @@
+# DAIR-I dataset
+# Default dataset location is:
+#   /yolov5-test
+#     /data
+#       /dair_i
+#         /images
+#         /annotations_yolo
+#           /annotations
+#           /sets
+
+
+train: data/dair_i/annotations_yolo/sets/train.txt  # 5042 images
+val: data/dair_i/annotations_yolo/sets/val.txt  # 2016 images
+
+# number of classes
+nc: 3
+
+# class names
+names: [ 'Car', 'Pedestrian', 'Cyclist' ]
